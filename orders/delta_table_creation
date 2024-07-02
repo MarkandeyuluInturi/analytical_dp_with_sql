@@ -1,0 +1,24 @@
+
+CREATE TABLE mydelta.mark.orders (
+   row_id bigint,
+   order_id varchar,
+   order_date varchar,
+   ship_date varchar,
+   ship_mode varchar,
+   customer_id varchar,
+   customer_name varchar,
+   segment varchar,
+   country varchar,
+   city varchar,
+   state varchar,
+   postal_code varchar,
+   region varchar,
+   product_id varchar,
+   category varchar,
+   sub_category varchar,
+   product_name varchar,
+   sales double,
+   quantity double,
+   discount double,
+   profit double
+)

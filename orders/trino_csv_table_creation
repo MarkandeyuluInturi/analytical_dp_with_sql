@@ -1,0 +1,28 @@
+CREATE TABLE minio.mark.orders1(
+	row_id VARCHAR ,
+	order_id VARCHAR ,
+	order_date VARCHAR ,
+	ship_date VARCHAR,
+	ship_mode VARCHAR ,
+	customer_id VARCHAR ,
+	customer_name VARCHAR ,
+	segment VARCHAR ,
+	country VARCHAR ,
+	city VARCHAR ,
+	state VARCHAR ,
+	postal_code VARCHAR ,
+	region VARCHAR ,
+	product_id VARCHAR ,
+	category VARCHAR ,
+	sub_category VARCHAR ,
+	product_name VARCHAR ,
+	sales VARCHAR ,
+	quantity VARCHAR ,
+	discount VARCHAR ,
+	profit VARCHAR
+)
+WITH (
+  format = 'CSV',
+  csv_separator = ',',
+  external_location='s3a://mark/'
+);

@@ -1,0 +1,24 @@
+insert into mydelta.mark.orders 
+select TRY_CAST(REPLACE(row_id , '''', '') as bigint) as row_id ,
+	REPLACE(order_id , '''', '') as order_id ,
+	REPLACE(order_date, '''', '')  as order_date ,
+	REPLACE(ship_date, '''', '') as ship_date ,
+	REPLACE(ship_mode, '''', '')  as ship_mode ,
+	REPLACE(customer_id, '''', '') as customer_id  ,
+	REPLACE(customer_name, '''', '')  as customer_name ,
+	REPLACE(segment, '''', '') as  segment ,
+	REPLACE(country , '''', '') as country ,
+	REPLACE(city, '''', '')  as city ,
+	REPLACE(state, '''', '')  as state ,
+	REPLACE(postal_code, '''', '')  as postal_code ,
+	REPLACE(region , '''', '')  as region,
+	REPLACE(product_id, '''', '') as product_id  ,
+	REPLACE(category, '''', '')  as category ,
+	REPLACE(sub_category, '''', '') as  sub_category ,
+	REPLACE(product_name, '''', '') as product_name ,
+	TRY_CAST(REPLACE(sales, '''', '') as double) as sales ,
+	TRY_CAST(REPLACE(quantity, '''', '') as double) as  quantity,
+	TRY_CAST(REPLACE(discount, '''', '') as double) as discount,
+	TRY_CAST(REPLACE(profit , '''', '') as double) as profit
+from
+minio.mark.orders1;
